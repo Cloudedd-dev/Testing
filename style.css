@@ -12,7 +12,7 @@ body {
     background: #2b2d31;
     padding: 25px;
     border-radius: 15px;
-    width: 300px;
+    width: 320px;
     text-align: center;
     box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
@@ -34,4 +34,11 @@ p {
     margin: 6px 0;
     font-size: 15px;
     opacity: 0.9;
+}
+
+.activity-box {
+    background: #1e1f22;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
 }
