@@ -1,25 +1,30 @@
-const API_URL = "https://identities-presence.onrender.com/v1/user/1360925264669966338/";
+const API_URL = "https://identities-presence-uwui.onrender.com/v1/users/1360925264669966338";
 
 async function loadPresence() {
     try {
         const res = await fetch(API_URL);
         const data = await res.json();
 
+        // Basic user info
+        const user = data.user;
+        const presence = data.presence;
+
         // Avatar
-        document.getElementById("avatar").src = data.avatar;
+        document.getElementById("avatar").src = user.avatar;
 
         // Username
-        document.getElementById("username").textContent = data.username;
+        document.getElementById("username").textContent = user.username;
 
         // Status
-        document.getElementById("status").textContent = "Status: " + data.status;
+        document.getElementById("status").textContent = "Status: " + presence.status;
 
         // Activity
-        if (data.activities && data.activities.length > 0) {
+        if (presence.activities && presence.activities.length > 0) {
+            const act = presence.activities[0];
             document.getElementById("activity").textContent =
-                "Activity: " + data.activities[0].name;
+                `${act.type}: ${act.name}`;
         } else {
-            document.getElementById("activity").textContent = "Activity: None";
+            document.getElementById("activity").textContent = "None";
         }
 
     } catch (err) {
