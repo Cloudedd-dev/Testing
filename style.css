@@ -12,7 +12,7 @@ body {
     background: #2b2d31;
     padding: 25px;
     border-radius: 15px;
-    width: 320px;
+    width: 340px;
     text-align: center;
     box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
@@ -25,20 +25,16 @@ body {
     margin-bottom: 15px;
 }
 
-h2 {
-    margin: 10px 0;
-    font-size: 22px;
-}
-
-p {
-    margin: 6px 0;
-    font-size: 15px;
-    opacity: 0.9;
-}
-
 .activity-box {
     background: #1e1f22;
     padding: 10px;
     border-radius: 10px;
     margin-top: 15px;
+}
+
+.activity-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-top: 10px;
 }
